@@ -14,8 +14,8 @@ public class Acertijo
       public List<string> pistas { get; set; } = new List<string>
         {
             "A simple vista, todo parece en orden... pero ¿y si uno de ellos estuviera mintiendo? Observá con atención los pasaportes. A veces, los errores revelan más de lo que ocultan.",         
-            "LILLE",         
-            "CAMPOS Y PICO", 
+            "Observá con atención lo primero de cada imagen, quizá ahí haya una clave",         
+            "Busca en el mapa los nombres que miran al cielo y tocan la tierra. La verdad está donde ambos se cruzan.", 
             "4312"         
         };
                 [JsonProperty]
@@ -29,6 +29,7 @@ public class Acertijo
 
   
         public bool gano { get; set; }
+
          public bool ValidarRespuesta(string RespuestaJugador)
   {
 
@@ -50,7 +51,7 @@ public class Acertijo
   }
            public bool ValidarRespuestaFinal(string RespuestaJugador)
   {
-bool finalizo = false;
+ bool finalizo = false;
     RespuestaJugador = RespuestaJugador.ToUpper();
        if (RespuestaJugador == RespuestasCorrectas[3])
     {
@@ -69,7 +70,7 @@ bool finalizo = false;
        string pista = pistas[SalaActual];
        return pista;
   }
-  
+
 }
  
 
