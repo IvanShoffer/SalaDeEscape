@@ -7,7 +7,7 @@ public class Acertijo
             "FRANCIA",
             "LILLE",
             "CAMPOS Y PICO",
-            "4312"
+            "1402"
         };
 
     [JsonProperty]
@@ -16,7 +16,7 @@ public class Acertijo
             "A simple vista, todo parece en orden... pero ¿y si uno de ellos estuviera mintiendo? Observá con atención los pasaportes. A veces, los errores revelan más de lo que ocultan.",
             "Observá con atención lo primero de cada imagen, quizá ahí haya una clave",
             "Busca en el mapa los nombres que miran al cielo y tocan la tierra. La verdad está donde ambos se cruzan.",
-            "4312"
+            "Entre el número de la fortuna doblada, y el mes que solo tiene 28 razones la mayoría del tiempo, está la clave que abrís con la cabeza, no con el corazón."
         };
     [JsonProperty]
 
@@ -34,7 +34,7 @@ public class Acertijo
     {
 
         RespuestaJugador = RespuestaJugador.ToUpper();
-        if (RespuestaJugador == RespuestasCorrectas[SalaActual])
+        if (RespuestaJugador == RespuestasCorrectas[SalaActual-1])
         {
             gano = true;
             SalaActual++;
@@ -69,7 +69,7 @@ public class Acertijo
     public string darPistas()
     {
 
-        string pista = pistas[SalaActual];
+        string pista = pistas[SalaActual-1];
         return pista;
     }
 

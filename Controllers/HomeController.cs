@@ -40,7 +40,7 @@ public class HomeController : Controller
         return View("Sala123");
     }
     
-    public IActionResult Sala123(string respuesta)
+    public IActionResult Sala1234(string respuesta)
     {
      Acertijo acertijo = Objeto.StringToObject<Acertijo>(HttpContext.Session.GetString("Juego"));
      if(ViewBag.acertijo is null)
@@ -54,7 +54,7 @@ public class HomeController : Controller
             ViewBag.Mensaje = "Respuesta incorrecta. Intentá de nuevo.";
         }
 
-        if(acertijo.SalaActual == 5){
+        if(acertijo.SalaActual > acertijo.RespuestasCorrectas.Count()){
             return View("final");
         }
 
