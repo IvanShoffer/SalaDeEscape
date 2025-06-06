@@ -37,7 +37,7 @@ public class HomeController : Controller
 
 
 
-        return View("Sala123");
+        return View("Sala1");
     }
     
     public IActionResult Sala1234(string respuesta)
