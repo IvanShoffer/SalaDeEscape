@@ -1,24 +1,23 @@
 
 
 <p>Observa los siguientes pasaportes y responde: ¿En que país se encuentra el secuestrador?</p>
-<form asp-controller="Home" asp-action="Sala1234" method="post">
-    <input type="text" name="respuesta" placeholder="Respuesta" />
-    <button type="submit">Validar</button>
-</form>
-<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+<form action = '@Url.Action("Sala1234", "Home")' method ="POST" > 
+ Ingrese la respuesta:<input type = "text" name= "respuesta"/>
+ <input type= "submit" name= "guardar"/>
+ </form>    
+
     <div>
-        <img src="~/wwwroot/Pasaporte1.png" alt="Pasaporte 1" width="200" />
+        <img src="~/imagenes/Pasaporte1.png" alt="Pasaporte 1"  />
     </div>
     <div>
-        <img src="~/wwwroot/Pasaporte2.png" alt="Pasaporte 2" width="200" />
+        <img src="~/imagenes/Pasaporte2.png" alt="Pasaporte 2"  />
     </div>
     <div>
-        <img src="~/wwwroot/Pasaporte3.png" alt="Pasaporte 3" width="200" />
+        <img src="~/imagenes/Pasaporte3.png" alt="Pasaporte 3"  />
     </div>
     <div>
-        <img src="~/wwwroot/Pasaporte4.png" alt="Pasaporte 4" width="200" />
+        <img src="~/imagenes/Pasaporte4.png" alt="Pasaporte 4" />
     </div>
-</div>
-<button onclick="mostrarPista()">Nueva pista</button>
-<p id="pista" style="display: none;">@ViewBag.pista</p>
+
+
 

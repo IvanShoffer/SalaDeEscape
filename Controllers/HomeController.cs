@@ -35,37 +35,31 @@ public class HomeController : Controller
        Acertijo acertijo = new Acertijo();
        HttpContext.Session.SetString("juego", Objeto.ObjectToString(acertijo));
 
-
-
         return View("Sala1");
     }
     
     public IActionResult Sala1234(string respuesta)
     {
      Acertijo acertijo = Objeto.StringToObject<Acertijo>(HttpContext.Session.GetString("Juego"));
-     if(ViewBag.acertijo is null)
-
-    
-   
-    
-        if (!acertijo.ValidarRespuesta(respuesta))
+     if(acertijo !=null)
+     {
+ if (!acertijo.ValidarRespuesta(respuesta))
         {
         
             ViewBag.Mensaje = "Respuesta incorrecta. Intentá de nuevo.";
         }
 
-        if(acertijo.SalaActual > acertijo.RespuestasCorrectas.Count()){
+        if(acertijo.SalaActual >= acertijo.RespuestasCorrectas.Count()){
             return View("final");
         }
 
-        
+  
     
-
-    ViewBag.pista = acertijo.darPistas();
-
-       HttpContext.Session.SetString("juego", Objeto.ObjectToString(acertijo));
-
-    return View("Sala"+acertijo.SalaActual);
+        
+     }
+      HttpContext.Session.SetString("juego", Objeto.ObjectToString(acertijo));
+      return View("Sala"+acertijo.SalaActual);
+   
     }
 }
   
