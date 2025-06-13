@@ -12,7 +12,7 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-    
+
 
     public IActionResult Index()
     {
@@ -22,45 +22,46 @@ public class HomeController : Controller
     {
         return View("comoJugar");
     }
-     public IActionResult participantes()
+    public IActionResult participantes()
     {
         return View("participantes");
     }
-     public IActionResult final()
+    public IActionResult final()
     {
         return View("final");
     }
     public IActionResult InicializarAcertijo()
     {
-       Acertijo acertijo = new Acertijo();
-       HttpContext.Session.SetString("juego", Objeto.ObjectToString(acertijo));
+        Acertijo acertijo = new Acertijo();
+
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString(acertijo));
+
 
         return View("Sala1");
     }
-    
-    public IActionResult Sala1234(string respuesta)
+
+    public IActionResult Sala1234(string? respuesta, bool pista)
     {
-     Acertijo acertijo = Objeto.StringToObject<Acertijo>(HttpContext.Session.GetString("Juego"));
-     if(acertijo !=null)
-     {
- if (!acertijo.ValidarRespuesta(respuesta))
+        Acertijo acertijo = Objeto.StringToObject<Acertijo>(HttpContext.Session.GetString("juego"));
+        if (acertijo != null && respuesta != null)
         {
-        
-            ViewBag.Mensaje = "Respuesta incorrecta. Intentá de nuevo.";
+            if (!acertijo.ValidarRespuesta(respuesta))
+            {
+                ViewBag.Mensaje = "Respuesta incorrecta. Intentá de nuevo.";
+            }
+            if (acertijo.SalaActual >= 5)
+            {
+                return View("final");
+            }
         }
-
-        if(acertijo.SalaActual >= acertijo.RespuestasCorrectas.Count()){
-            return View("final");
+        if (pista == true)
+        {
+            ViewBag.pista = acertijo.darPistas();
         }
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString(acertijo));
+        return View("Sala" + acertijo.SalaActual);
 
-  
-    
-        
-     }
-      HttpContext.Session.SetString("juego", Objeto.ObjectToString(acertijo));
-      return View("Sala"+acertijo.SalaActual);
-   
     }
+
 }
-  
- 
+

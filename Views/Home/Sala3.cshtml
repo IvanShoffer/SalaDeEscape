@@ -1,0 +1,17 @@
+<section class="sala3">
+<p>"Donde el campo se encuentra con la cima, ahí espera la esposa del hombre."</p>
+
+<form action = '@Url.Action("Sala1234", "Home")' method ="POST" > 
+ Ingrese la respuesta:<input type = "text" name= "respuesta"/>
+ <input type= "submit" name= "guardar"/>
+ </form>
+
+    <div>
+        <img src="~/imagenes/Mapa.png" alt="foto 1"  />
+    </div>
+     <a href='@Url.Action("Sala1234","Home", new { pista=true})'> Pista</a>
+
+@if(ViewBag.pista != null)
+{<h3>@ViewBag.pista</h3>}
+</section>
+

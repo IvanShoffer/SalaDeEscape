@@ -1,9 +1,11 @@
-<p>Observa las siguientes imagenes y responde: ¿En que ciudad se esconde el secuestrador?</p>
-<p>Observa los siguientes pasaportes y responde: ¿En que país se encuentra el secuestrador?</p>
+<section class="sala2">
+    <p>Observa las siguientes imagenes y responde: ¿En que ciudad se esconde el secuestrador?</p>
+
 <form action = '@Url.Action("Sala1234", "Home")' method ="POST" > 
  Ingrese la respuesta:<input type = "text" name= "respuesta"/>
  <input type= "submit" name= "guardar"/>
-
+ </form>
+  <div class="imagenes-container">
     <div>
         <img src="~/imagenes/limon.png" alt="foto 1"  />
     </div>
@@ -19,8 +21,13 @@
     <div>
         <img src="~/imagenes/elefante.png" alt="foto 5" />
     </div>
-</div>
-<form action = '@Url.Action("Sala1234", "Home")' method ="POST" >
- <input type = "text" name= "respuesta"/>
- <input type= "submit" name= "guardar"/>
- </form>    
+        </div>
+     <a href='@Url.Action("Sala1234","Home", new { pista=true})'> Pista</a>
+
+@if(ViewBag.pista != null)
+{<h3>@ViewBag.pista</h3>}
+</section>
+
+
+
+

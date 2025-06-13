@@ -20,7 +20,7 @@ public class Acertijo
         };
     [JsonProperty]
 
-    public int SalaActual { get; set; }
+    public int SalaActual { get; set; } = 1;
     [JsonProperty]
 
 
@@ -34,6 +34,11 @@ public class Acertijo
     {
 
         RespuestaJugador = RespuestaJugador.ToUpper();
+          if (SalaActual <= 0 || SalaActual > RespuestasCorrectas.Count)
+    {
+        
+        return false;
+    }
         if (RespuestaJugador == RespuestasCorrectas[SalaActual-1])
         {
             gano = true;

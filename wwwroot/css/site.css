@@ -1,23 +1,251 @@
-html {
-  font-size: 14px;
-  min-height: 100%;
+.sala1 {
+  background-image: url('/imagenes/fondo1.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: black;
+  min-height: 180vh;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
 
-body {
-  margin: 10px;
+.sala1 form {
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
+  display: inline-block;
+  margin: 5px;
+  font-size: 18px;
 }
 
+.sala1 a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6200ea;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
 
-footer {
-  margin-top: 10px;
+.sala1 h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 12px;
+  border-left: 5px solid #6200ea;
+  max-width: 90%;
+}
+
+.sala1 .imagenes-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.sala1 .imagenes-container div {
+  display: inline-block;
+  margin: 30px;
+}
+
+.sala1 .imagenes-container img {
+  width: 420px;
+  height: auto;
+  border: 4px solid white;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+.sala1 {
+  background-image: url('/imagenes/fondo1.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: black;
+  min-height: 180vh;
+}
+.sala2 {
+  background-image: url('/imagenes/fondo2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: black;
+  min-height: 180vh;
+}
+
+.sala2 p,
+.sala2 form {
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
-  background-color: #f8f9fa;
-  border-top: 1px solid #e9ecef;
+  display: inline-block;
+  margin: 5px;
+  font-size: 18px;
 }
+
+.sala2 a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6200ea;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.sala2 h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 12px;
+  border-left: 5px solid #6200ea;
+  max-width: 90%;
+}
+
+.sala2 .imagenes-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.sala2 .imagenes-container div {
+  display: inline-block;
+  margin: 30px;
+}
+
+.sala2 .imagenes-container img {
+  width: 280px;
+  height: auto;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.sala3 {
+  background-image: url('/imagenes/fondo3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 20px;
+  color: black;
+  min-height: 180vh;
+}
+
+.sala3 p,
+.sala3 form {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  display: inline-block;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.sala3 a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6200ea;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.sala3 h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 12px;
+  border-left: 5px solid #6200ea;
+  max-width: 90%;
+}
+
+.sala3 div {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.sala3 div img {
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.sala4 {
+  background-image: url('/imagenes/fondo4.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 20px;
+  color: black;
+  min-height: 100vh;
+}
+
+
+.sala4 form {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  display: inline-block;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.sala4 a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6200ea;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.sala4 h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 12px;
+  border-left: 5px solid #6200ea;
+  max-width: 90%;
+}
+.final {
+  background-image: url('/imagenes/final.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 40px;
+  text-align: center;
+  color: black;
+  min-height: 100vh;
+}
+
+.final h1 {
+  font-size: 32px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  padding: 15px 25px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+
+.final a {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #6200ea;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+
+
+
+
+

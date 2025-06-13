@@ -1,0 +1,14 @@
+<section class="sala4">
+
+<p>"Llegan a la habitación donde está la esposa encerrada, pero la puerta está bloqueada con una llave digital."</p>
+<p>"nuestro dia amor, esa es la contraseña"</p>
+<form action = '@Url.Action("Sala1234", "Home")' method ="POST" > 
+ Ingrese la respuesta:<input type = "text" name= "respuesta"/>
+ <input type= "submit" name= "guardar"/>
+ </form>
+  <a href='@Url.Action("Sala1234","Home", new { pista=true})'> Pista</a>
+
+@if(ViewBag.pista != null)
+{<h3>@ViewBag.pista</h3>}
+</section>
+
